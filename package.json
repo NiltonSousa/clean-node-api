@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests --silent --noStackTrace",
+    "test:verbose": "jest --passWithNoTests",
+    "test:unit": "jest --passWithNoTests -c jest-unit.config.js",
+    "test:integration": "jest --passWithNoTests -c jest-int.config.js"
   },
   "author": "",
   "license": "ISC",
