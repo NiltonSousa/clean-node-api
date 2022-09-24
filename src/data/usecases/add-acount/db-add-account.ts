@@ -22,9 +22,8 @@ export class DbAddAccount implements AddAccount {
 
     // TO-LEARN: The object.assign replaces a object property to another
     // initial state = {} --> {...accountData, but replace password value for hashedPassword}
-    await this.addAccountRepository.add(
+    return await this.addAccountRepository.add(
       Object.assign({}, accountData, { password: hashedPassword })
     );
-    return new Promise((resolve) => resolve(null));
   }
 }
